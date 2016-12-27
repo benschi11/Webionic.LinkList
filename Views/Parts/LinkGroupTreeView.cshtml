@@ -31,7 +31,7 @@
                     {
                         text = link.LinkPart.Url.Value;
                     }
-                    <tr class="@if (i % 2 == 0)
+                    <tr onclick="DoNav('@link.LinkPart.Url.Value')" class="@if (i % 2 == 0)
                                {
                                    <text>even</text>
                                }
@@ -40,7 +40,8 @@
                                    <text>odd</text>
                                }">
                         <td class="link">
-                            <a href="@link.LinkPart.Url.Value" @if (!string.IsNullOrWhiteSpace(link.LinkPart.Url.Target))
+                            <a href="@link.LinkPart.Url.Value" 
+                               @if (!string.IsNullOrWhiteSpace(link.LinkPart.Url.Target))
                                                                {
                                                                    <text> target="@link.LinkPart.Url.Target" </text>
                                                                }>@text</a>
@@ -53,4 +54,17 @@
             </tbody>
         </table>
     }
+}
+
+
+@using (Script.Foot()) {
+
+    <script type="text/javascript">
+
+        function DoNav(theUrl)
+        {
+            window.open(theUrl);
+        }
+    </script>
+
 }

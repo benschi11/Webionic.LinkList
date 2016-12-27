@@ -10,37 +10,39 @@
 
 /* ############### Table Styles ############### */
 
-table.table {
-	width: 100%;
-	padding: 1px 10px;
-	border: 1px #1d9ce5 solid !important;
-	text-align: left;
-}
+table.linkTable {
+    width: 100%;
+    padding: 1px 10px;
+    border: 1px #1d9ce5 solid !important;
+    text-align: left;
+    cursor: pointer;
 
-.table thead > tr > th,
-.table tbody > tr > th,
-.table tfoot > tr > th,
-.table thead > tr > td,
-.table tbody > tr > td,
-.table tfoot > tr > td {
-	border-top: none;
-}
 
-table.table td {
-	margin-bottom: 0.5em;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	padding-left: 5px;
-}
+    thead > tr > th,
+    tbody > tr > th,
+    tfoot > tr > th,
+    thead > tr > td,
+    tbody > tr > td,
+    tfoot > tr > td {
+        border-top: none;
+    }
 
-table.table td.link {
-	width: 250px;
-}
+    td {
+        margin-bottom: 0.5em;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 5px;
+    }
 
-table.table .even {
-	background-color: aliceblue;
-}
+    td.link {
+        width: 250px;
+    }
 
-table.table .odd {
-	background-color: white;
+    .even {
+        background-color: aliceblue;
+    }
+
+    .odd {
+        background-color: white;
+    }
 }
