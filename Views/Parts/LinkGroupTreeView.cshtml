@@ -1,0 +1,55 @@
+﻿@{
+    int i = 1;
+}
+@*@{
+    foreach (var linkGroup in Model.TreePart.TreeData)
+    {
+        @Display(Model.shapeHelper.Find((Orchard.DisplayManagement.Shapes.Shape)Model, linkGroup.ParentItem.ContentType.ToString()))
+
+        foreach (var link in linkGroup.ChildItems)
+        {
+            Display(link);
+        }
+    }
+}*@
+
+@{
+    foreach (var linkGroup in Model.TreePart.TreeData)
+    {
+        <div class="linkGroupHeader">@linkGroup.ParentItem.TitlePart.Title</div>
+
+
+        <table class="table">
+            <tbody>
+                @{ i = 0; }
+                @foreach (var link in linkGroup.ChildItems)
+                {
+                    i++;
+                    var text = link.LinkPart.Url.Text;
+                    if (String.IsNullOrWhiteSpace(text))
+                    {
+                        text = link.LinkPart.Url.Value;
+                    }
+                    <tr class="@if (i % 2 == 0)
+                               {
+                                   <text>even</text>
+                               }
+                               else
+                               {
+                                   <text>odd</text>
+                               }">
+                        <td class="link">
+                            <a href="@link.LinkPart.Url.Value" @if (!string.IsNullOrWhiteSpace(link.LinkPart.Url.Target))
+                                                               {
+                                                                   <text> target="@link.LinkPart.Url.Target" </text>
+                                                               }>@text</a>
+                        </td>
+                        <td class="description">
+                            @link.LinkPart.Description.Value
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}

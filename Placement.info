@@ -1,0 +1,11 @@
+﻿<Placement>
+  <Place Parts_LinkGroupTreeView="Content:3"/>
+  <Place Parts_LinkGroupTreeViewPart_Edit="Content:10"/>
+  <Match ContentType="LinkGroup">
+    <Place Parts_Container_Edit="-" />
+  </Match>
+
+  <Match ContentType="Fotoalbum">
+    <Place Parts_ZenGallery_Edit="-" />
+  </Match>
+</Placement>
