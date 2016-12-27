@@ -3,6 +3,12 @@
   <Place Parts_LinkGroupTreeViewPart_Edit="Content:10"/>
   <Match ContentType="LinkGroup">
     <Place Parts_Container_Edit="-" />
+
+  </Match>
+
+  <Match ContentType="LinkPage">
+    <Place Parts_Common_Metadata ="-" />
+    <Place Parts_Title ="-" />
   </Match>
 
   <Match ContentType="Fotoalbum">

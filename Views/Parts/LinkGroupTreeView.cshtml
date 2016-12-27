@@ -1,5 +1,6 @@
 ﻿@{
     int i = 1;
+    Style.Require("Webionic.LinkList");
 }
 @*@{
     foreach (var linkGroup in Model.TreePart.TreeData)
@@ -19,7 +20,7 @@
         <div class="linkGroupHeader">@linkGroup.ParentItem.TitlePart.Title</div>
 
 
-        <table class="table">
+        <table class="linkTable">
             <tbody>
                 @{ i = 0; }
                 @foreach (var link in linkGroup.ChildItems)

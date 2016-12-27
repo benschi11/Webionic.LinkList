@@ -1,0 +1,8 @@
+﻿[
+  {
+    "inputs": [
+      "Assets/Webionic.LinkList.less"
+    ],
+    "output": "Styles/Webionic.LinkList.css"
+  }
+]
